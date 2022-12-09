@@ -22,7 +22,8 @@ _Este proyecto está realizado con HTML, CSS puro y un poco de Javascript._
 
 _Aquí tienes una demo de la página:_
 
-[aquieltexto](aquielenlacedelnetlify)
+[Clica aquí para verla!](https://pagina-restaurante-adrihc.netlify.app
+)
 
 ## Autora... ✒️
 
