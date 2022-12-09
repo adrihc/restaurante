@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/restaurant logo.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Encuentranos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(236, 236, 236);
+        }
+
+        .mainMenu {
+            z-index: 1;
+            position: fixed;
+            color: black;
+            width: 220px;
+            height: 100%;
+            border-top-right-radius: 30% 40%;
+            border-bottom-right-radius: 30% 40%;
+            font-weight: bold;
+            text-align: center;
+            opacity: 1;
+            background: rgb(160, 33, 33);
+            box-shadow: rgba(0, 0.25, 0.75, 1) 0px 5px 15px;
+        }
+
+        @font-face {
+            font-family: Calligraphy;
+            src: url(fonts/CalligraphyFLF.ttf);
+        }
+
+        .locationLyrics {
+            font-family: Calligraphy;
+            font-size: 200%;
+            color: black;
+        }
+
+        .locationLyrics:hover {
+            color: black;
+        }
+
+        .headerLyrics {
+            font-family: Calligraphy;
+            font-size: 200%;
+            opacity: 1;
+            color: black;
+        }
+
+        .headerLyrics:hover {
+            transition: 0.5s;
+            color: red;
+        }
+
+        p {
+            color: black;
+        }
+
+        p:hover {
+            transition: 0.5s;
+            color: white;
+        }
+
+        a {
+            text-decoration: none !important;
+        }
+
+        #formulario {
+            background-color: rgb(160, 33, 33);
+            box-shadow: rgba(0, 0.25, 0.75, 1) 0px 5px 15px;
+            font-family: Calligraphy;
+            font-size: 170%;
+            position: relative;
+            top: 40px;
+            left: 400px;
+            right: 100;
+            width: 800px;
+            height: 110%;
+            border-top-left-radius: 5% 5%;
+            border-bottom-left-radius: 5% 5%;
+            border-top-right-radius: 5% 5%;
+            border-bottom-right-radius: 5% 5%;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        select {
+            width: 70%;
+            padding: 6px 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="date"] {
+            width: 23%;
+            padding: 6px 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="time"] {
+            width: 13%;
+            padding: 6px 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        form {
+            margin-left: 10%;
+        }
+
+        input[type=submit] {
+            width: 30%;
+            background-color: #cad16d;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input:hover {
+            transition: 0.2s;
+            box-shadow: rgba(0, 0.25, 0.75, 1) 0px 5px 15px;
+        }
+
+        label:hover {
+            transition: 0.5s;
+            color: white;
+        }
+
+        u:hover {
+            cursor: pointer;
+            transition: 0.5s;
+            color: white;
+        }
+
+        #telefonos {
+            margin-left: 30px;
+        }
+
+        input[type=submit]:hover {
+            background-color: #a1a755;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="mainMenu">
+        <br>
+        <a href="index.html"><img src="images/restaurant logo.png" alt="Not found" height="100" width="160"
+                id="logoHeader"></a>
+
+        <div class="headerLyrics">
+            <a href="menu.html">
+                <p>Menú</p>
+            </a>
+            <a href="find.html">
+                <p>Donde estamos</p>
+            </a>
+            <a href="reserva.html">
+                <p>Reserva</p>
+            </a>
+            <a href="call.html">
+                <p>Llámanos</p>
+            </a>
+            <a href="https://www.twitter.com/"><img src="images/twitter.png" alt="Not found" height="40" width="40"
+                    id="logoHeader"></a>
+            <a href="https://www.instagram.com/"><img src="images/instagram.png" alt="Not found" height="40" width="40"
+                    id="logoHeader"></a>
+            <a href="https://www.facebooks.com/"><img src="images/facebook.png" alt="Not found" height="40" width="40"
+                    id="logoHeader"></a>
+            <a href="call.html"><img src="images/whatsapp.png" alt="Not found" height="40" width="40"
+                    id="logoHeader"></a>
+        </div>
+    </div>
+    <div id="formulario">
+        <div id="telefonos">
+            Puedes llamarnos al: <br>
+            <img src="images/phone.png" width="40px" height="40px"><label>971-971-971</label><br>
+            <img src="images/phone.png" width="40px" height="40px"><label>971-971-972</label><br>
+            <img src="images/phone.png" width="40px" height="40px"><label>666-666-666</label>
+            <br>También puedes contactar con nosotros escribiendonos un email:
+            <br>
+            <img src="images/email.png" width="40px" height="40px"><u>mailrestaurante@gmail.com</u><br>
+            Puedes enviar un mensaje a nuestro WhatsApp al:<br>
+            <img src="images/whatsapp.png" width="60px" height="60px"><label> 666-666-667</label>
+        </div>
+    </div>
+</body>
+
+</html>

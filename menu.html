@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/restaurant logo.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <title>Restaurant</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(236, 236, 236);
+        }
+
+        .mainMenu {
+            z-index: 1;
+            position: fixed;
+            color: black;
+            width: 220px;
+            height: 100%;
+            border-top-right-radius: 30% 40%;
+            border-bottom-right-radius: 30% 40%;
+            font-weight: bold;
+            text-align: center;
+            opacity: 1;
+            background: rgb(160, 33, 33);
+            box-shadow: rgba(0, 0.25, 0.75, 1) 0px 5px 15px;
+        }
+
+        #foodimg {
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 45%;
+            height: 100%;
+            border-top-left-radius: 5% 5%;
+            border-bottom-left-radius: 5% 5%;
+            font-weight: bold;
+            text-align: center;
+            opacity: 1;
+            background: rgb(160, 33, 33);
+            box-shadow: rgba(0, 0.25, 0.75, 1) 0px 5px 15px;
+        }
+
+        @font-face {
+            font-family: Calligraphy;
+            src: url(fonts/CalligraphyFLF.ttf);
+        }
+
+        .headerLyrics {
+            font-family: Calligraphy;
+            font-size: 200%;
+            opacity: 1;
+            color: black;
+        }
+
+        p {
+            font-family: Calligraphy;
+            color: black;
+        }
+
+        p:hover {
+            transition: 0.5s;
+            color: white;
+        }
+
+        u {
+            font-family: Calligraphy;
+            color: black;
+        }
+
+        u:hover {
+            cursor: pointer;
+            color: rgb(219, 44, 44);
+            ;
+            transition: 0.5s;
+        }
+
+        a {
+            text-decoration: none !important;
+        }
+
+        #list {
+            position: relative;
+            left: 300px;
+        }
+
+        ol {
+            list-style-type: inherit;
+        }
+
+        #changeImage {
+            position: relative;
+            background-color: white;
+            top: 50px;
+            box-shadow: rgba(0, 0.25, 0.75, 1) 0px 5px 15px;
+        }
+
+        h3 {
+            font-family: Calligraphy;
+            font-size: 300%;
+        }
+
+        #menuLyrics {
+            font-family: Calligraphy;
+            color: black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="mainMenu">
+        <br>
+
+        <a href="index.html"><img src="images/restaurant logo.png" alt="Not found" height="100" width="160"
+                id="logoHeader"></a>
+
+        <div class="headerLyrics">
+            <a href="menu.html">
+                <p>Menú</p>
+            </a>
+            <a href="find.html">
+                <p>Donde estamos</p>
+            </a>
+            <a href="reserva.html">
+                <p>Reserva</p>
+            </a>
+            <a href="call.html">
+                <p>Llámanos</p>
+            </a>
+            <a href="https://www.twitter.com/"><img src="images/twitter.png" alt="Not found" height="40" width="40"
+                    id="logoHeader"></a>
+            <a href="https://www.instagram.com/"><img src="images/instagram.png" alt="Not found" height="40" width="40"
+                    id="logoHeader"></a>
+            <a href="https://www.facebooks.com/"><img src="images/facebook.png" alt="Not found" height="40" width="40"
+                    id="logoHeader"></a>
+            <a href="call.html"><img src="images/whatsapp.png" alt="Not found" height="40" width="40"
+                    id="logoHeader"></a>
+        </div>
+    </div>
+
+    <div>
+        <div id="list">
+            <ol>
+                <h3>Entrantes</h3>
+                <li><u class="menuLyrics" onclick="mostraimg('images/Chipirones-rebozados.jpg')"
+                        style="font-size: 200%;">
+                        Chipirones - 2$</u></li>
+                <li><u class="menuLyrics" onclick="mostraimg('images/450_1000.jpg')" style="font-size: 200%;">
+                        Croquetas - Jamón, Pollo o Atún - 2$</u></li>
+                <li><u class="menuLyrics" onclick="mostraimg('images/rollos.jpg')" style="font-size: 200%;">
+                        Rollos de Jamón y Queso con pan<br> de molde - 2$</u></li>
+                <li><u class="menuLyrics" onclick="mostraimg('images/calamares.jpg')" style="font-size: 200%;">
+                        Calamares a la Romana - 2$</u></li>
+
+                <h3>Primer plato</h3>
+                <li><u class="menuLyrics" onclick="mostraimg('images/canelones.jpg')" style="font-size: 200%;">
+                        Canelones Bolognesa - 5$</u></li>
+                <li><u class="menuLyrics" onclick="mostraimg('images/escalope.jpg')" style="font-size: 200%;">
+                        Escalope Rebozado de Pollo o Ternera - 7$</u></li>
+                <li><u class="menuLyrics" onclick="mostraimg('images/spag.jpg')" style="font-size: 200%;">
+                        Spaghetti Carbonara - 5$</u></li>
+
+                <h3>Segundo plato</h3>
+                <li><u class="menuLyrics" onclick="mostraimg('images/lechona.jpg')" style="font-size: 200%;">
+                        Lechona con Patatas - 10$</u></li>
+                <li><u class="menuLyrics" onclick="mostraimg('images/cordero.jpg')" style="font-size: 200%;">
+                        Cordero al horno con Patatas - 2$</u></li>
+
+                <h3>Postre</h3>
+                <li><u class="menuLyrics" onclick="mostraimg('images/cheesecake.jpg')" style="font-size: 200%;">
+                        Cheesecake - 2$</u></li>
+                <li><u class="menuLyrics" onclick="mostraimg('images/banoffee.jpg')" style="font-size: 200%;">
+                        Banoffee - 2$</u></li>
+
+                <h3>Bebida</h3>
+                <li><u class="menuLyrics" onclick="mostraimg('images/vino.jpg')" style="font-size: 200%;">
+                        Botella de Vino Petrus - 15$</u></li>
+                <li><u class="menuLyrics" onclick="mostraimg('images/cola.jpg')" style="font-size: 200%;">
+                        Botella de Coca-Cola - 2$</u></li>
+            </ol>
+        </div>
+        <div id="foodimg">
+            <img id="changeImage" src="images/restaurant logo.png" width="500px" height="300px">
+        </div>
+    </div>
+    <script>
+        function mostraimg(url) {
+            document.getElementById("changeImage").src = url
+        }
+    </script>
+</body>
+
+</html>
