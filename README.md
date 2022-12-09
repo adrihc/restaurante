@@ -1,5 +1,6 @@
 # Restaurante - HTML
 ---
+[![preview](https://github.com/adrihc/restaurante/blob/main/fotoreadme.jpeg)](https://github.com/adrihc/restaurante/blob/main/fotoreadme.jpeg)
 
 
 _Esta página web es una template de un restaurante._
