@@ -2,23 +2,22 @@
 <html lang="es">
 
 <head>
-    <meta  charset="UTF-8">
-    <meta  name="viewport"  content="width=device-width, initial-scale=1.0">
-    <meta  name="description"  content="Página web del restaurante">
-    <meta  name="keywords"  content="HTML, CSS, JavaScript">
-    <meta  name="author"  content="Adriana Hernández">
-    <meta  name="theme-color"  content="#008938"  />
-    <link rel="icon" href="images/restaurant logo.png" type="image/png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página web del restaurante">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Adriana Hernández">
+    <meta name="theme-color" content="#008938" />
+    <link  rel="icon"   href="images/restaurant logo.png" type="image/png" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <title>Restaurant</title>
     <style>
         * {
             margin: 0;
             padding: 0;
-        }
-
-        body {
-            background-color: rgb(236, 236, 236);
         }
 
         .mainMenu {
@@ -32,23 +31,19 @@
             font-weight: bold;
             text-align: center;
             opacity: 1;
+        }
+
+        .mainMenu:hover {
             background: rgb(160, 33, 33);
+            color: white;
+            opacity: 0.8;
+            transition-duration: 0.5s;
             box-shadow: rgba(0, 0.25, 0.75, 1) 0px 5px 15px;
         }
 
-        #foodimg {
-            position: fixed;
-            right: 0;
-            top: 0;
-            width: 45%;
+        .carousel-inner img {
+            width: 100%;
             height: 100%;
-            border-top-left-radius: 5% 5%;
-            border-bottom-left-radius: 5% 5%;
-            font-weight: bold;
-            text-align: center;
-            opacity: 1;
-            background: rgb(160, 33, 33);
-            box-shadow: rgba(0, 0.25, 0.75, 1) 0px 5px 15px;
         }
 
         @font-face {
@@ -60,59 +55,24 @@
             font-family: Calligraphy;
             font-size: 200%;
             opacity: 1;
-            color: #DABB63;
+            color: white;
         }
 
+        .headerLyrics:hover {
+            transition: 0.5s;
+            color: red;
+        }
         p {
-            font-family: Calligraphy;
-            color: #DABB63;
+            color: white;
         }
 
         p:hover {
             transition: 0.5s;
-            color: white;
-        }
-
-        u {
-            font-family: Calligraphy;
             color: black;
-        }
-
-        u:hover {
-            cursor: pointer;
-            color: rgb(219, 44, 44);
-            ;
-            transition: 0.5s;
         }
 
         a {
             text-decoration: none !important;
-        }
-
-        #list {
-            position: relative;
-            left: 300px;
-        }
-
-        ol {
-            list-style-type: inherit;
-        }
-
-        #changeImage {
-            position: relative;
-            background-color: white;
-            top: 50px;
-            box-shadow: rgba(0, 0.25, 0.75, 1) 0px 5px 15px;
-        }
-
-        h3 {
-            font-family: Calligraphy;
-            font-size: 300%;
-        }
-
-        #menuLyrics {
-            font-family: Calligraphy;
-            color: black;
         }
     </style>
 
@@ -121,7 +81,6 @@
 <body>
     <div class="mainMenu">
         <br>
-
         <a href="index.html"><img src="images/restaurant logo.png" alt="Not found" height="100" width="160"
                 id="logoHeader"></a>
 
@@ -147,71 +106,35 @@
             <a href="call.html"><img src="images/whatsapp.png" alt="Not found" height="40" width="40"
                     id="logoHeader"></a>
         </div>
+
+
     </div>
 
-    <div>
-        <div id="list">
-            <h3>Entrantes</h3>
-            <ol>
-                <li><u class="menuLyrics" onclick="mostraimg('images/Chipirones-rebozados.jpg')"
-                        style="font-size: 200%;">
-                        Chipirones - 2$</u></li>
-                <li><u class="menuLyrics" onclick="mostraimg('images/450_1000.jpg')" style="font-size: 200%;">
-                        Croquetas - Jamón, Pollo o Atún - 2$</u></li>
-                <li><u class="menuLyrics" onclick="mostraimg('images/rollos.jpg')" style="font-size: 200%;">
-                        Rollos de Jamón y Queso con pan<br> de molde - 2$</u></li>
-                <li><u class="menuLyrics" onclick="mostraimg('images/calamares.jpg')" style="font-size: 200%;">
-                        Calamares a la Romana - 2$</u></li>
-            </ol>
-            
-            <h3>Primer plato</h3>
-            
-            <ol>
-                <li><u class="menuLyrics" onclick="mostraimg('images/canelones.jpg')" style="font-size: 200%;">
-                        Canelones Bolognesa - 5$</u></li>
-                <li><u class="menuLyrics" onclick="mostraimg('images/escalope.jpg')" style="font-size: 200%;">
-                        Escalope Rebozado de Pollo o Ternera - 7$</u></li>
-                <li><u class="menuLyrics" onclick="mostraimg('images/spag.jpg')" style="font-size: 200%;">
-                        Spaghetti Carbonara - 5$</u></li>
 
-            </ol>
-            
-            <h3>Segundo plato</h3>
-            
-            <ol>
-                <li><u class="menuLyrics" onclick="mostraimg('images/lechona.jpg')" style="font-size: 200%;">
-                        Lechona con Patatas - 10$</u></li>
-                <li><u class="menuLyrics" onclick="mostraimg('images/cordero.jpg')" style="font-size: 200%;">
-                        Cordero al horno con Patatas - 2$</u></li>
-            </ol>
-            
-            <h3>Postre</h3>
-            
-            <ol>
-                <li><u class="menuLyrics" onclick="mostraimg('images/cheesecake.jpg')" style="font-size: 200%;">
-                        Cheesecake - 2$</u></li>
-                <li><u class="menuLyrics" onclick="mostraimg('images/banoffee.jpg')" style="font-size: 200%;">
-                        Banoffee - 2$</u></li>
-            </ol>
+    <div id="demo" class="carousel slide" data-ride="carousel">
 
-            <h3>Bebida</h3>
-            
-            <ol>
-                <li><u class="menuLyrics" onclick="mostraimg('images/vino.jpg')" style="font-size: 200%;">
-                        Botella de Vino Petrus - 15$</u></li>
-                <li><u class="menuLyrics" onclick="mostraimg('images/cola.jpg')" style="font-size: 200%;">
-                        Botella de Coca-Cola - 2$</u></li>
-            </ol>
-        </div>
-        <div id="foodimg">
-            <img id="changeImage" src="images/restaurant logo.png" alt="Not found"x width="500px" height="300px">
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+            <li data-target="#demo" data-slide-to="3"></li>
+        </ul>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/insideRestaurant.jpg" alt="" width="1100" height="500">
+            </div>
+            <div class="carousel-item">
+                <img src="images/foodPhoto.jpg" alt="" width="1100" height="400">
+            </div>
+            <div class="carousel-item">
+                <img src="images/foodPhotoTwo.jpg" alt="" width="1100" height="400">
+            </div>
+            <div class="carousel-item">
+                <img src="images/chefPhoto.jpg" alt="" width="1100" height="400">
+            </div>
         </div>
     </div>
-    <script>
-        function mostraimg(url) {
-            document.getElementById("changeImage").src = url
-        }
-    </script>
 </body>
 
 </html>
