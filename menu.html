@@ -50,6 +50,11 @@
             background: rgb(160, 33, 33);
             box-shadow: rgba(0, 0.25, 0.75, 1) 0px 5px 15px;
         }
+        #list {
+            position: fixed;
+            left: 25%;
+            width: 40%;
+        }
 
         @font-face {
             font-family: Calligraphy;
@@ -89,10 +94,7 @@
             text-decoration: none !important;
         }
 
-        #list {
-            position: relative;
-            left: 300px;
-        }
+
 
         ol {
             list-style-type: inherit;
@@ -110,10 +112,7 @@
             font-size: 300%;
         }
 
-        #menuLyrics {
-            font-family: Calligraphy;
-            color: black;
-        }
+
     </style>
 
 </head>
@@ -203,10 +202,11 @@
                         Botella de Coca-Cola - 2$</u></li>
             </ol>
         </div>
-        <div id="foodimg">
+        
+    </div>
+    <div id="foodimg">
             <img id="changeImage" src="images/restaurant logo.png" alt="Not found"x width="500px" height="300px">
         </div>
-    </div>
     <script>
         function mostraimg(url) {
             document.getElementById("changeImage").src = url
